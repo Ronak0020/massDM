@@ -29,7 +29,7 @@ class DMallCommand extends commando.Command {
 
         if(!msg || msg.length <= 1) {
             const embed = new Discord.RichEmbed()
-                .addField(":x: Failed to send", "Message not specified")
+                .addField(":x: Failed to send!", "Message not specified")
                 .addField(":eyes: Listen up!", "Every character past the command will be sent,\nand apparently there was nothing to send.");
             message.channel.send({ embed: embed });
             return;
