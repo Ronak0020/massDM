@@ -20,9 +20,8 @@ bot.on("ready", () => {
     let statuses = [
         `⚡with ${bot.users.size} users⚡`,
         `⚡in ${bot.guilds.size} servers⚡`,
-        '❤️with my god!❤️',
         '✨In my server!✨',
-        '🥰with your mom!'
+        'with your mom!'
 ]
         setInterval(function() {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
