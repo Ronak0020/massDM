@@ -19,7 +19,9 @@ bot.on("ready", () => {
     console.log('______')
     let statuses = [
         `⚡${bot.users.size} users⚡`,
-        `⚡${bot.guilds.size} servers⚡`
+        `⚡${bot.guilds.size} servers⚡`,
+        'My owner',
+        're!help'
 ]
         setInterval(function() {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
