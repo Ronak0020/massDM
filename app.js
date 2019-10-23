@@ -18,15 +18,13 @@ bot.on("ready", () => {
     clear();
     console.log('______')
     let statuses = [
-        `⚡with ${bot.users.size} users⚡`,
-        `⚡in ${bot.guilds.size} servers⚡`,
-        '✨In my server!✨',
-        'with your mom!'
+        `⚡${bot.users.size} users⚡`,
+        `⚡${bot.guilds.size} servers⚡`
 ]
         setInterval(function() {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
-        bot.user.setActivity(status, {type: "PLAYING"});
-}, 3000)
+        bot.user.setActivity(status, {type: "WATCHING"});
+}, 2000)
 });
 
 
