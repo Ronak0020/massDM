@@ -43,6 +43,7 @@ class DMroleCommand extends commando.Command {
         let memberarray = role.members.array();
         let membercount = memberarray.length;
         console.log(`Responding to ${message.author.username} :  Sending message to all ${membercount} members of role ${role.name}.`)
+        message.channel.send(`Sending message to ${membercount} of role ${role.name} as requested by ${message.author.username}`)
         for (var i = 0; i < membercount; i++) {
             let timeout = Math.floor((Math.random() * (config.wait - 0.01)) * 1000) + 10;
             let member = memberarray[i];
@@ -52,7 +53,7 @@ class DMroleCommand extends commando.Command {
             } else {
                 console.log(`Waited ${timeout}ms.\t|${i + 1}|\tDMing ${member.user.username}`);
             }
-            member.send(`${msg} \n\n [${timeout}]`);
+            member.send(`${msg}`);
         }
     }
 }
