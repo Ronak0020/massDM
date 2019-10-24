@@ -53,8 +53,8 @@ else bot.login(config.token);
 
 function clear() {
     console.clear();
-    console.log(figlet.textSync("MassDM v3.3.0").green);
-    console.log("\n\nMass DM bot for Discord. \n Sends DMs to selected members of guild.\n  Forked and improved by Alex.");
+    console.log(figlet.textSync("Wraith Bot v1.0.0").green);
+    console.log("\n\nWraith bot for Discord. \n Sends DMs to selected members of guild.\n  Made by Ronak.");
     console.log(`\nRandom send time set @ 0.01-${config.wait}s`);
     console.log(` Type  ${config.prefix}help  in a chat.\n\n`);
 }
