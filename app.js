@@ -29,6 +29,13 @@ bot.on("ready", () => {
 }, 2000)
 });
 
+bot.on('message', message => {
+	if(message.content === 're!invite')
+	{
+		message.channel.send('Invite the bot by going to this link :- \n https://discordapp.com/oauth2/authorize?client_id=636486089107963914&permissions=8&scope=bot \n Thanks in advance for Inviting me! :p')
+	}
+})
+
 
 bot.on("error", (error) => {
     bot.login(config.token);
