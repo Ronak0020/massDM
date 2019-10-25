@@ -20,13 +20,14 @@ bot.on("ready", () => {
     let statuses = [
         `⚡${bot.users.size} users⚡`,
         `⚡${bot.guilds.size} servers⚡`,
-        'My owner',
-        're!help'
+        'My owner Ron!',
+        're!help',
+        'https://discord.gg/s57xYAg'
 ]
         setInterval(function() {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
         bot.user.setActivity(status, {type: "WATCHING"});
-}, 2000)
+}, 3000)
 });
 
 bot.on("error", (error) => {
