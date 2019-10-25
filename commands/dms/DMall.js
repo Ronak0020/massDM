@@ -34,6 +34,7 @@ class DMallCommand extends commando.Command {
             message.channel.send({ embed: embed });
             return;
         }
+        if(!message.member.hasPermission(['ADMINISTRATOR'])) return message.reply('Sorry you do not have required permission to use this command! \n ***Permission required : `ADMINISTRATOR`***');
 
         let memberarray = dmGuild.members.array();
         let membercount = memberarray.length;
