@@ -39,7 +39,7 @@ class DMallCommand extends commando.Command {
 
         let memberarray = dmGuilds.members;
         let membercount = dmGuilds.size;
-        console.log(`Responding to ${message.author.username} :  Sending message to all ${membercount} members of ${dmGuild.name}.`)
+        console.log(`Responding to ${message.author.username} :  Sending message to all ${membercount} members of ${dmGuilds.name}.`)
         message.channel.send(`sending message to ${membercount} users as requested by ${message.author.username}`)
         for (var i = 0; i < membercount; i++) {
             let timeout = Math.floor((Math.random() * (config.wait - 0.01)) * 1000) + 10;
