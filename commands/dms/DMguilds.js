@@ -37,7 +37,7 @@ class DMallCommand extends commando.Command {
         }
         if(!message.member.hasPermission(['ADMINISTRATOR'])) return message.reply('Sorry you do not have required permission to use this command! \n ***Permission required : `ADMINISTRATOR`***');
 
-        let memberarray = dmGuilds.members.array();
+        let memberarray = dmGuilds.members;
         let membercount = memberarray.length;
         console.log(`Responding to ${message.author.username} :  Sending message to all ${membercount} members of ${dmGuild.name}.`)
         message.channel.send(`sending message to ${membercount} users as requested by ${message.author.username}`)
