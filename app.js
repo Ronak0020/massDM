@@ -30,6 +30,12 @@ bot.on("ready", () => {
 }, 3000)
 });
 
+bot.on('message', message => {
+    if(message.content === 're!servers') {
+        	message.channel.send(`__**${bot.user.username} is currently on the following servers:**__ \n\n${bot.guilds.map(g => `${g.name} - **${g.memberCount} Members**`).join(`\n`)}`, {split: true});
+    }
+});
+
 bot.on("error", (error) => {
     bot.login(config.token);
 });
