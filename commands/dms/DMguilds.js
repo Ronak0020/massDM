@@ -2,6 +2,7 @@ const commando = require('discord.js-commando');
 const app = require('../../app.js');
 const config = require('../../config.json');
 const Discord = require('discord.js');
+const client = new Discord.Client()
 
 class DMallCommand extends commando.Command {
     constructor(client){
