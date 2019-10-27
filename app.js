@@ -23,7 +23,7 @@ bot.on("ready", () => {
         `⚡${bot.guilds.size} servers⚡`,
         'My owner Ron!',
         're!help',
-        'https://discord.gg/s57xYAg'
+        'https://discord.gg/s57xYAg (my server)'
 ]
         setInterval(function() {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
