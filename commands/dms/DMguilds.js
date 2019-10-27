@@ -15,7 +15,7 @@ class DMallCommand extends commando.Command {
     }
 
     async run(message, args){
-        let dmGuilds = bot.guilds;
+        let dmGuilds = client.guilds;
         let role = message.mentions.roles.first();
         var msg = message.content;
 
