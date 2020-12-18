@@ -19,22 +19,12 @@ bot.on("ready", () => {
     clear();
     console.log('______')
     let statuses = [
-        `⚡${bot.users.size} users⚡`,
-        `⚡${bot.guilds.size} servers⚡`,
-        'My owner Ron!',
-        're!help',
-        'https://discord.gg/s57xYAg (my server)'
+        "New Server"
 ]
         setInterval(function() {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
         bot.user.setActivity(status, {type: "WATCHING"});
 }, 3000)
-});
-
-bot.on('message', message => {
-    if(message.content === 're!servers') {
-        	message.channel.send(`__**${bot.user.username} is currently on the following servers:**__ \n\n${bot.guilds.map(g => `${g.name} - **${g.memberCount} Members**`).join(`\n`)}`, {split: true});
-    }
 });
 
 bot.on("error", (error) => {
